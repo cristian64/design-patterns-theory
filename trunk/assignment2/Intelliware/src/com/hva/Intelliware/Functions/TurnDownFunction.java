@@ -11,13 +11,8 @@ public class TurnDownFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
+	public boolean doFunction(String[] args) {
 		System.out.println("Turn Down");
-        return true;
-    }
-
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
-	}    
+		return true;
+	}   
 }

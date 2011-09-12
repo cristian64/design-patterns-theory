@@ -11,13 +11,8 @@ public class HighFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
-		System.out.println("Stop");
-        return true;
-    }
-
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
+	public boolean doFunction(String[] args) {
+		System.out.println("High");
+		return true;
 	}    
 }

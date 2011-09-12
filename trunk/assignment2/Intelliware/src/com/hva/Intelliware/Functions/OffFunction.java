@@ -11,13 +11,8 @@ public class OffFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
-        System.out.println("Turn Off");
-        return true;
-    }
-	
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
-	}    
+	public boolean doFunction(String[] args) {
+		System.out.println("Turn Off");
+		return true;
+	}   
 }

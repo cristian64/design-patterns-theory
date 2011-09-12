@@ -10,13 +10,8 @@ public class DimUpFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
+	public boolean doFunction(String[] args) {
 		System.out.println("Dim Up");
-        return true;
-    }
-
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
+		return true;
 	}    
 }

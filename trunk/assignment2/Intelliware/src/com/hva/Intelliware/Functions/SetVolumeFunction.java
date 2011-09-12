@@ -9,24 +9,18 @@ public class SetVolumeFunction implements Function {
 	public String getName() {
 		return "SET_VOLUME";		
 	}
-
-	@Override
-    public boolean doFunction() {
-        // function requires integer value
-		return false;
-    }
 	
 	@Override
-	public boolean doFunction(String value) {
+	public boolean doFunction(String[] args) {
 		// function requires integer value, attempt conversion
 		try {
-			int i = Integer.parseInt(value);
+			int i = Integer.parseInt(args[0]);
 			System.out.println("Volume set to " + i);
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		return false;
-	}  
+	}   
 	
 }

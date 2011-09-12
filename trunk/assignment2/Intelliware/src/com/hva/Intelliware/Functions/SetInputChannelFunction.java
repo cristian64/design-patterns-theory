@@ -9,18 +9,16 @@ public class SetInputChannelFunction implements Function {
 	public String getName() {
 		return "SETINPUTCHANNEL";		
 	}
-
-	@Override
-    public boolean doFunction() {
-        // function requires integer value
-		return false;
-    }
 	
 	@Override
-	public boolean doFunction(String value) {
+	public boolean doFunction(String[] args) {
 		// function requires integer value, attempt conversion		
-			System.out.println("Input channel set to " + value);
+		if (args.length < 0) {
+			return false; 
+		} else {
+			System.out.println("Input channel set to " + args[0]);
 			return true;
+		}
 	}  
 	
 }

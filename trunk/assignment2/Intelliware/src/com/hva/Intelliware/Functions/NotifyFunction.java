@@ -11,13 +11,8 @@ public class NotifyFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
-        System.out.println("Notify");
-        return true;
-    }
-	
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
-	}    
+	public boolean doFunction(String[] args) {
+		System.out.println("Notify");
+		return true;
+	}      
 }
