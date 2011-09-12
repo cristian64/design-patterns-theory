@@ -11,13 +11,8 @@ public class JetsOffFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
-        System.out.println("Jets Off");
-        return true;
-    }
-	
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
+	public boolean doFunction(String[] args) {
+		System.out.println("Jets Off");
+		return true;
 	}    
 }

@@ -11,22 +11,16 @@ public class SetTemperatureFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
-        // function requires integer value
-		return false;
-    }
-	
-	@Override
-	public boolean doFunction(String value) {
+	public boolean doFunction(String[] args) {
 		// function requires integer value, attempt conversion
 		try {
-			int i = Integer.parseInt(value);
+			int i = Integer.parseInt(args[0]);
 			System.out.println("Temperature set to " + i);
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		return false;
-	}  
+	}   
 	
 }

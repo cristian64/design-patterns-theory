@@ -10,13 +10,8 @@ public class DisarmFunction implements Function {
 	}
 
 	@Override
-    public boolean doFunction() {
-        System.out.println("Disarm Security");
-        return true;
-    }
-	
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();		
+	public boolean doFunction(String[] args) {
+		System.out.println("Disarm Security");
+		return true;
 	}    
 }

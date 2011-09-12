@@ -10,14 +10,9 @@ public class CloseCrankFunction implements Function{
 	}
 
 	@Override
-	public boolean doFunction() {
+	public boolean doFunction(String[] args) {
 		System.out.println("Close Crank");
 		return true;
-	}
-
-	@Override
-	public boolean doFunction(String value) {
-		return doFunction();
-	}
+	}   
 	
 }

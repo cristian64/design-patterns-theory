@@ -20,23 +20,23 @@ public class RemoteControl {
 		CeilingFan myFan = new CeilingFan();
 				
 		// perform some actions on the ceiling fan
-		myFan.doFunction("ON");
-		myFan.doFunction("OFF");
-		myFan.doFunction("HIGH");
-		myFan.doFunction("MEDIUM");
-		myFan.doFunction("LOW");
+		myFan.doFunction("ON",new String[]{""});
+		myFan.doFunction("OFF",new String[]{""});
+		myFan.doFunction("HIGH",new String[]{""});
+		myFan.doFunction("MEDIUM",new String[]{""});
+		myFan.doFunction("LOW",new String[]{""});
 		
 		// lets create an Alarm and perform some actions
 		SecurityControl myAlarm = new SecurityControl();
-		myAlarm.doFunction("ARM");
-		myAlarm.doFunction("DISARM");
-		myAlarm.doFunction("NOTIFY");
-		myAlarm.doFunction("ALERT");
-		myAlarm.doFunction("STOP");	// not supported by alarm, pretend we are stupid
+		myAlarm.doFunction("ARM",new String[]{""});
+		myAlarm.doFunction("DISARM",new String[]{""});
+		myAlarm.doFunction("NOTIFY",new String[]{""});
+		myAlarm.doFunction("ALERT",new String[]{""});
+		myAlarm.doFunction("STOP",new String[]{""});	// not supported by alarm, pretend we are stupid
 	
 		// lets create an TV and set the volume to 20
 		TV myTV = new TV();
-		myTV.doFunction("SET_VOLUME", "20"); // function with parameter
+		myTV.doFunction("SET_VOLUME", new String[]{"20"}); // function with parameter
 		
 		// obviously all devices can also be added to a arraylist to peform batch operations or checks
 		oaAllDevices.add(myFan);
@@ -45,7 +45,7 @@ public class RemoteControl {
 		
 		// lets turn all devices in arraylist off
 		for (GenericDevice device : oaAllDevices) {
-			device.doFunction("OFF");
+			device.doFunction("OFF", new String[]{""});
 		}		
 		
 		System.out.println("End of Demo");
@@ -97,8 +97,8 @@ public class RemoteControl {
 		} else if ((input>-1)&&(input<10)) {
 			// check if device has that many options		
 			if (oaAllDevices.get(iCurrentDevice).functions.size() > input) {
-				// execute corresponding function
-				oaAllDevices.get(iCurrentDevice).doFunction(oaAllDevices.get(iCurrentDevice).functions.get(input).getName());
+				// execute corresponding function				
+				oaAllDevices.get(iCurrentDevice).doFunction(oaAllDevices.get(iCurrentDevice).functions.get(input).getName(), new String[]{""});
 			}
 			} else {
 				System.out.println("invalid input");

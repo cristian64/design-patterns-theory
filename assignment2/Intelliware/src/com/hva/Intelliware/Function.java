@@ -7,7 +7,6 @@ package com.hva.Intelliware;
  * specific function implementations
  */
 public interface Function {
-	public String getName(); 
-    public boolean doFunction();    
-    public boolean doFunction(String value);
+	public String getName();
+    public boolean doFunction(String[] args);
 }
